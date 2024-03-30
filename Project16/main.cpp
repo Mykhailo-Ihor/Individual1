@@ -19,9 +19,9 @@ int main()
         }
     }
     travels.printAll();
-    cout << left << setw(28) << "Total price of all travels" << ':' << travels.totalPrice() << endl;
-    cout << left << setw(28) << "Most expensive car travel" << ':' << * travels.findMostExpensive(typeid(CarTravel)) << endl;
-    cout << left << setw(28) << "Most expensive family travel" << ':' << *travels.findMostExpensive(typeid(FamilyTravel)) << endl;
+    cout << left << setw(28) << "Total price of all travels" << ": " << travels.totalPrice() << endl;
+    cout << left << setw(28) << "Most expensive car travel" << ": " << *travels.findMostExpensive(typeid(CarTravel)) << endl;
+    cout << left << setw(28) << "Most expensive family travel" << ": " << *travels.findMostExpensive(typeid(FamilyTravel)) << endl;
     //Початковий варіант з викристанням дружньої функції
     //LinkedList carTravels = createOneTypeList(travels, typeid(CarTravel));
     //carTravels.printAll();
@@ -32,12 +32,15 @@ int main()
     cout << "\nCar Travels:\n";
     carTravels.printAll();
     FamilyTravelsList familyTravels(travels);
+    travels.removeAll();
     cout << "Family Travels:\n";
     familyTravels.printAll();
     Car MostEx = carTravels.findMostExpensiveCar();
     cout << "Most expensive "; MostEx.printOn();
     unsigned memq = familyTravels.findMembersQuantity();
     cout << "\nMembers quantity in cheapest travel: " << memq << endl;
+    carTravels.removeAll();
+    familyTravels.removeAll();
     //Приклад винятку 
     FamilyTravelsList example;
     try

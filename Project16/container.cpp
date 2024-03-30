@@ -263,6 +263,11 @@ void CarTravelsList::printAll() const
     LinkedList::printAll();
 }
 
+void CarTravelsList::removeAll()
+{
+    LinkedList::removeAll();
+}
+
 Car CarTravelsList::findMostExpensiveCar() const
 {
     if (head == nullptr)
@@ -293,6 +298,11 @@ void FamilyTravelsList::createList(const LinkedList& LL)
 void FamilyTravelsList::printAll() const
 {
     LinkedList::printAll();
+}
+
+void FamilyTravelsList::removeAll()
+{
+    LinkedList::removeAll();
 }
 
 unsigned FamilyTravelsList::findMembersQuantity() const

@@ -67,6 +67,7 @@ public:
     CarTravelsList(const LinkedList& LL) { createList(LL); }
     void createList(const LinkedList& LL);
     void printAll() const;
+    void removeAll();
     Car findMostExpensiveCar() const;
 };
 
@@ -77,5 +78,6 @@ public:
     FamilyTravelsList(const LinkedList& LL) { createList(LL); }
     void createList(const LinkedList& LL);
     void printAll() const;
+    void removeAll();
     unsigned findMembersQuantity() const;
 };
